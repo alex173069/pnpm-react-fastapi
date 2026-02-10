@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import AddFruitForm from './AddFruitForm';
 import UpdateFruitForm from './UpdateFruitForm';
+import DeleteFruitForm from './DeleteFruitForm';
 import api from '../api';
 
 const FruitList = () => {
@@ -63,11 +64,10 @@ const FruitList = () => {
       <ul>
         <UpdateFruitForm updateFruit={updateFruit} />
         {fruits.map((fruit, index) => (
-          <li key={index}>{fruit.name}
-          <button onClick={() => removeFruit(fruit.name)} style={{ marginLeft: '10px' }}>Delete</button>
-          </li>
+          <li key={index}>{fruit.name}</li>
         ))}
       </ul>
+      <DeleteFruitForm removeFruit={removeFruit} />
       <AddFruitForm addFruit={addFruit} />
     </div>
   );
