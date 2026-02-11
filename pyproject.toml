@@ -1,10 +1,10 @@
 [project]
 name = "pnpm-react-fastapi"
 version = "0.1.0"
-description = "Add your description here"
+description = "This is the workspace root."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []
 
 [tool.uv.workspace]
-members = ["core", "database", "api/*"]
+members = ["core", "database", "services/*"]

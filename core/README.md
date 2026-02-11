@@ -1,0 +1,1 @@
+This is the app business logic (isolated from everything else)
